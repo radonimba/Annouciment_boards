@@ -1,0 +1,39 @@
+<html>
+<head> 
+<title> ANNOUCIMENT BOARD MANAGEMENT SYSTEMS </title>
+ <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet">
+ <link href="/styles.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="container">
+<h2> ANNOUCIMENT BOARD MANAGEMENT SYSTEMS </h2>
+
+<form action ="/addtask" method="POST">
+
+    <textarea name="newtask" id="" cols="60" rows="10"></textarea><br>
+<button> Announce now </button>
+
+<br>
+<hr>
+<h2> Views Annouciment </h2>
+
+<% for( var i = 0; i < task.length; i++){ %>
+    <li><input type="checkbox" name="check" value="<%= task[i] %>" /> <%= task[i] %> </li>
+<% } %>
+
+<button formaction="/removetask" type="submit" id="top"> Remove </button>
+</form>
+
+<br>
+<hr>
+<h2> Expired Annouciment Completed </h2>
+
+ <% for(var i = 0; i < complete.length; i++){ %>
+    <li><input type="checkbox" checked><%= complete[i] %> </li>
+<% } %>
+
+</div>
+
+</body>
+</html>
